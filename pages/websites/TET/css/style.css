@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  font-size: 20px;
+  color: #303B40;
+}
+.container {
+  max-width: 1146px;
+  margin: auto;
+}
+
+/* HEADER
+==================== */
+
+.header {
+  background: url(../img/header/bg.png) no-repeat;
+}
+
+.nav {
+  display: flex;
+  border-bottom: solid 2px #5477BB;
+  padding: 18px 0;
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-phone a {
+  font-size: 16px;
+  color: #303B40;
+  line-height: 60px;
+  margin-right: 32px;
+}
+
+.nav-phone a:hover {
+  color: #F69A1B;
+}
+
+.nav-phone img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.nav-viber {
+  border: 1px solid #E8E8E8;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+  transition: box-shadow ease-in-out 0.3s;
+}
+
+.nav-viber img {
+  padding: 30% 0;
+}
+
+.nav-viber:hover {
+  box-shadow: 0px 0px 10px rgb(121, 121, 121);
+}
+
+.nav-telegram {
+  border: 1px solid #E8E8E8;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+  transition: box-shadow ease-in-out 0.3s;
+}
+
+.nav-telegram img {
+  padding: 32% 0;
+}
+
+.nav-telegram:hover {
+  box-shadow: 0px 0px 10px rgb(121, 121, 121);
+}
+
+.nav-button {
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  padding: 20px 36px;
+  background: #5477BB;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.nav-button:hover {
+  background: #415b8f;
+}
+
+.subnav {
+  margin-top: 20px;
+}
+
+.subnav-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subnav-item {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+}
+
+.subnav-item a {
+  color: #000;
+}
+
+.subnav-item a:hover {
+  color: #F69A1B;
+}
+
+/* Title
+================= */
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.title-text {
+  margin: 40px 0;
+}
+
+.title-text h1{
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 70px;
+}
+
+.title-img {
+  width: 50%;
+}
+
+.header-title ul {
+  margin-top: 70px;
+}
+
+.header-title li {
+  list-style: url('../img/header/list.svg');
+  line-height: 40px;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.orange-box {
+  margin-top: 40px;
+  display: flex;
+  background: #F69A1B;
+  padding: 35px 100px;
+  color: #FFF;
+}
+
+.orange-box h5 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.orange-box-right {
+  display: flex;
+  margin: 15px 0;
+}
+
+.orange-box-button {
+  padding: 20px 0;
+  background: #5477BB;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 30px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.orange-box-button a {
+  color: #FFF;
+  padding: 20px 36px;
+}
+
+.orange-box-button:hover {
+  background: #415b8f;
+}
+
+.orange-box-right input {
+  font-family: inherit; 
+  font-size: inherit; 
+  line-height: inherit; 
+  margin: 0; 
+
+  padding: 20px 100px 20px 20px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  height: 60px;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* ABOUT
+=================== */
+
+.about {
+  background: url(../img/about/bg.png) no-repeat right top;
+  padding: 100px 0 0 0;
+}
+
+.about-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding:0 100px 0 100px;
+}
+
+.about h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 54px;
+  margin: 0 0 35px;
+}
+
+.about h4 {
+  color: #5477BB;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.about-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.about-clients {
+  background: #F6F8F9;
+  padding: 40px 100px;
+  margin-top: 70px;
+}
+
+/* EXPERTS
+===================== */
+
+.experts {
+  padding: 100px 0;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.experts img {
+  margin-bottom: 18px;
+}
+
+.experts-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.experts-item {
+  max-width: 263px;
+}
+
+.expert-name {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.expert-profession {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8C969A;
+}
+
+/* HELP
+======================= */
+
+.help {
+  padding: 100px 0 0 0;
+  background: url(../img/help/bg.png) no-repeat top left;
+}
+
+.help-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.help-left {
+  width: 60%;
+}
+
+.help-left h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 54px;
+  margin-bottom: 30px;
+}
+
+.help-left h4 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #5477BB;
+  margin-bottom: 50px;
+}
+
+.help-text {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.help-right {
+  padding: 40px 70px;
+  background: #E8E8E8;
+}
+
+.help-right h4 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #F69A1B;
+  margin-bottom: 27px;
+}
+
+.help-right ul {
+  margin-left: 15px;
+}
+
+.help-right li {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  list-style: url('../img/header/list.svg');
+}
+
+.help h3 {
+  margin-top: 35px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 44px;
+  width: 80%;
+}
+
+/* EXPERIENCE
+===================== */
+
+.experience {
+  margin-top: 100px;
+}
+
+.experience img {
+  position: relative;
+  margin-left: -25%;
+}
+
+.experience-box {
+  position: relative;
+  background: #F69A1B;
+  color: #FFF;
+  padding: 60px 70px;
+  max-width: 556px;
+  top: -450px;
+  float: right;
+}
+
+.experience-box h6 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 25px;
+}
+
+.experience-box p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+}
