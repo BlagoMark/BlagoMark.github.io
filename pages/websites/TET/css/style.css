@@ -128,6 +128,13 @@ body {
   background: #415b8f;
 }
 
+.burger {
+  background: none;
+  padding: 15px;
+  cursor: pointer;
+  display: none;
+}
+
 .subnav {
   margin-top: 20px;
 }
@@ -361,7 +368,9 @@ body {
 
 .help-right {
   padding: 40px 70px;
-  background: #E8E8E8;
+  background: #F6F8F9;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
 }
 
 .help-right h4 {
@@ -454,7 +463,6 @@ body {
   background: #F6F8F9;
   width: 49%;
   max-width: 557px;
-  min-width: 320px;
   border: 1px solid #E8E8E8;
   box-sizing: border-box;
   margin: 10px 0;
@@ -539,4 +547,158 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
+}
+
+
+
+/* MEDIA
+=================== */
+
+@media (max-width: 1160px) {
+
+  .container {
+    padding: 0 15px;
+  }
+  
+  .orange-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experts {
+    padding: 40px 0;
+  }
+
+  .about {
+    padding: 40px 0;
+  }
+
+  .help {
+    padding: 0;
+  }
+
+  .orange-box-right {
+    margin: 20px auto 0;
+  }
+
+  .experience img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .experience-box {
+    padding: 60px 70px;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 927px) {
+
+  .header-title {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title-img {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title-img img {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .title-text {
+    margin: auto;
+  }
+
+  .orange-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .orange-box-right {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .orange-box-right input {
+    padding: 20px;
+  }
+
+  .orange-box-button {
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .about-clients {
+    padding: 30px;
+  }
+
+  .help-row {
+    flex-direction: column;
+  }
+
+  .help-left {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .servises-card {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+
+}
+
+@media (max-width: 840px) {
+  .subnav,
+  .nav-right {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .experience-box h6 {
+    font-size: 12vw;
+    line-height: 1;
+  }
+
+  .servises-card {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .servises-card ul {
+    margin-left: 20px;
+    padding: 20px 0;
+  }
+
+  .experience-box {
+    padding: 20px;
+  }
+
+  .outsoursing-right {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .outsoursing-right h5 {
+    font-size: 22vw;
+    line-height: 1;
+    margin: 0;
+  }
 }
