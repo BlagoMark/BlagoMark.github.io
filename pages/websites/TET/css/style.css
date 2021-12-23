@@ -299,10 +299,12 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .experts-item {
-  max-width: 263px;
+  width: 263px;
+  margin: 20px auto;
 }
 
 .expert-name {
@@ -408,7 +410,7 @@ body {
   color: #FFF;
   padding: 60px 70px;
   max-width: 556px;
-  top: -450px;
+  margin-top: -450px;
   float: right;
 }
 
@@ -420,6 +422,120 @@ body {
 }
 
 .experience-box p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* SERVISES
+===================== */
+
+.servises {
+  padding: 100px 0;
+  background: url(../img/servises/\ bg.png) no-repeat bottom right;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.servises h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.servises-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.servises-card {
+  padding: 40px;
+  background: #F6F8F9;
+  width: 49%;
+  max-width: 557px;
+  min-width: 320px;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.servises-card-title {
+  display: flex;
+}
+
+.servises-card img {
+  margin-right: 15px;
+}
+
+.servises-card h4 {
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.servises-card ul {
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+.servises-card li {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  list-style: url('../img/header/list.svg');
+}
+
+/* OUTSOURCING
+========================== */
+
+.outsoursing {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.outsoursing h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.outsoursing p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 48px 0;
+}
+
+.outsoursing h4 {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #5477BB;
+}
+
+.outsoursing-left {
+  flex: 3;
+}
+
+.outsoursing-right {
+  flex: 1;
+  background: #F69A1B;
+  color: #FFF;
+  padding: 64px 71px;
+}
+
+.outsoursing h5 {
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 70px;
+}
+
+.outsoursing-right p {
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
