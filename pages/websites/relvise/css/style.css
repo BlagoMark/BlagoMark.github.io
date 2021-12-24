@@ -166,7 +166,7 @@ h6 {
 .active-btn:hover {
     border: 1px solid #FF7B47;
     color: #FF7B47;
-    background: none;
+    background: #FFF;
 }
 
 /* Servises
