@@ -173,7 +173,7 @@ body {
   background-color: #fff;
   z-index: 98;
   padding: 70px 15px;
-  transition: 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .mobile-nav.is-active {
@@ -382,8 +382,17 @@ body {
   border-bottom: 1px solid #E8E8E8;
 }
 
+.experts-slider {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+
 .experts img {
   margin-bottom: 18px;
+  width: 95%;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .experts-row {
@@ -394,14 +403,18 @@ body {
 }
 
 .experts-item {
-  width: 263px;
   margin: 20px auto;
+  text-align: center;
+  padding: 0;
 }
 
 .expert-name {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 10px;
+  width: 240px;
+  margin: auto;
+  padding: 0;
 }
 
 .expert-profession {
@@ -505,6 +518,11 @@ body {
   max-width: 556px;
   margin-top: -450px;
   float: right;
+  transition: box-shadow 0.3s;
+}
+
+.experience-box:hover {
+  box-shadow: 0 0 40px rgb(82, 82, 82);
 }
 
 .experience-box h6 {
