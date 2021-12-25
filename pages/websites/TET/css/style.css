@@ -1202,7 +1202,6 @@ line-height: 28px;
 
 .footer {
   display: flex;
-  height: 50px;
   color: #FFF;
   text-align: center;
   justify-content: center;
@@ -1211,6 +1210,7 @@ line-height: 28px;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  padding: 20px;
 }
 
 
