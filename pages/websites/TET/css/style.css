@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 *,
 *::before,
 *::after {
@@ -375,7 +374,7 @@ body {
 }
 
 .about-text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
 }
@@ -430,7 +429,7 @@ body {
 }
 
 .expert-profession {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #8C969A;
@@ -470,7 +469,7 @@ body {
 }
 
 .help-text {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 20px;
   line-height: 32px;
 }
@@ -496,7 +495,7 @@ body {
 }
 
 .help-right li {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 40px;
   list-style: url('../img/header/list.svg');
@@ -538,7 +537,7 @@ body {
 }
 
 .experience-box h6 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 60px;
   line-height: 60px;
   margin-bottom: 25px;
@@ -604,7 +603,7 @@ body {
 }
 
 .servises-card li {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 40px;
   list-style: url('../img/header/list.svg');
@@ -626,7 +625,7 @@ body {
 }
 
 .outsoursing p {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   margin: 48px 0;
@@ -658,7 +657,7 @@ body {
 }
 
 .outsoursing h5 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 90px;
   line-height: 70px;
   transform: translateZ(20px);
@@ -726,7 +725,7 @@ body {
 }
 
 .for-who__item p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   color: #303B40;
@@ -751,7 +750,9 @@ body {
 ======================== */
 
 .benefits {
-  padding: 100px 0;
+  padding-top: 100px;
+  background: url(../img/benefits/bg.png) no-repeat top left;
+  background-size: contain;
 }
 
 .benefits__inner {
@@ -787,7 +788,7 @@ body {
 }
 
 .benefits__item p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   color: #8C969A;
@@ -861,7 +862,7 @@ body {
 }
 
 .begin-item {
-  padding-left: 20px;
+  width: 32%;
 }
 
 .begin-icon {
@@ -886,7 +887,7 @@ body {
 }
 
 .begin-item__text p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
 }
@@ -913,7 +914,7 @@ body {
 }
 
 .express-audit__text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   max-width: 656px;
@@ -960,12 +961,11 @@ body {
 
 .publications-slider {
   margin: auto;
-  width: 100%;
 }
 
 .publications-slider-item {
   height: 230px;
-  margin: 0 15px;
+  margin-right: 10px;
 }
 
 .publications-slider-item__image {
@@ -1020,6 +1020,7 @@ body {
 
 .trust-slider-item {
   margin: 0 5px;
+  background: #FFF;
 }
 
 .trust-slider-item img {
@@ -1078,7 +1079,7 @@ body {
 }
 
 .contacts-phones p {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   margin-right: 10px;
@@ -1102,7 +1103,7 @@ body {
 }
 
 .contacts-adress p {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   margin-right: 50px;
@@ -1145,7 +1146,7 @@ body {
 }
 
 .contacts-subscribe {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   margin-top: 30px;
@@ -1198,7 +1199,7 @@ body {
 .contacts-right p {
   display: flex;
   text-align: left;
-  font-weight: normal;
+  font-weight: 400;
   margin: 16px 0;
   font-size: 14px;
   line-height: 18px;
@@ -1233,7 +1234,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #303B40;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   padding: 20px;
@@ -1440,6 +1441,11 @@ body {
     padding: 30px;
     width: 100%;
     margin: auto;
+  }
+
+  .begin-item {
+    width: 100%;
+    margin: 10px auto;
   }
 }
 
