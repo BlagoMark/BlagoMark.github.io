@@ -937,6 +937,11 @@ body {
   padding: 16px 0;
   background: #5477BB;
   width: 215px;
+  transition: ease-in-out 0.3s;
+}
+
+.express-audit__btn a:hover {
+  background: #4063A7;
 }
 
 /* PUBLICATIONS
