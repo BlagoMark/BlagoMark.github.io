@@ -1045,7 +1045,7 @@ body {
 
 .contacts-left {
   width: 50%;
-  margin-right: 64px;
+  max-width: 556px;
 }
 
 .contacts-title h2 {
@@ -1170,16 +1170,17 @@ body {
 
 .contacts-right {
   background: #F69A1B;
-  width: 50%;
+  max-width: 460px;
+  width: 45%;
   color: #FFF;
-  margin-left: 64px;
   text-align: center;
-  padding: 60px 90px 70px 90px;
+  padding: 60px 50px;
 }
 
-.contacts-right input {
+.contacts-right input, textarea {
+  /* height: 60px; */
+  max-width: 264px;
   width: 100%;
-  height: 60px;
   padding: 20px;
   margin-bottom: 10px;
 }
@@ -1192,15 +1193,15 @@ body {
 }
 
 .contacts-message-textarea {
-  width: 100%;
   padding: 22px 20px;
 }
 
 .contacts-right p {
   display: flex;
   text-align: left;
+  max-width: 264px;
   font-weight: 400;
-  margin: 16px 0;
+  margin: 16px auto;
   font-size: 14px;
   line-height: 18px;
 }
