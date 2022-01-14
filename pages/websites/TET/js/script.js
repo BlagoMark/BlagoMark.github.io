@@ -1,25 +1,25 @@
-// Phone number field
-$(function(){
+// Phone number field ============================
+$(function () {
   $("#phone").mask("+38 (999) 999 - 99 - 99");
 });
 
-// navbar toggle
+// navbar toggle ===============================
 const menu_btn = document.querySelector('.burger');
 const mobile_menu = document.querySelector('.mobile-nav');
 
-menu_btn.addEventListener('click', function() {
+menu_btn.addEventListener('click', function () {
   menu_btn.classList.toggle('is-active');
   mobile_menu.classList.toggle('is-active');
 });
 
-$('.mobile-nav-item').click(function() {
+$('.mobile-nav-item, .mobile-nav-button').click(function () {
   mobile_menu.classList.toggle('is-active');
   menu_btn.classList.toggle('is-active');
 });
 
 
-// slider
-$(function(){
+// slider ======================================
+$(function () {
   $('.experts-slider').slick({
     infinite: true,
     arrows: false,
@@ -28,8 +28,7 @@ $(function(){
     autoplay: true,
     autoplaySpeed: 5000,
 
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 3
@@ -58,8 +57,7 @@ $(function(){
     autoplay: true,
     autoplaySpeed: 5000,
 
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 2
@@ -82,8 +80,7 @@ $(function(){
     autoplay: true,
     autoplaySpeed: 3000,
 
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
@@ -98,3 +95,21 @@ $(function(){
     ]
   });
 });
+
+// Scrolling animations ============================
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.orange-box, .about h2, .about h4, .about-text, .help-left, .help-right, .experience-box, .servises-card, .outsoursing-left, .outsoursing-right, .for-who__item, .benefits__item, .growth__box');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
