@@ -286,7 +286,7 @@ input:hover, textarea:hover {
 }
 
 .title-text {
-  margin: 40px auto;
+  margin: 40px 0 40px;
 }
 
 .title-text h1 {
