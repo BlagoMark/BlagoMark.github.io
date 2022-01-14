@@ -283,6 +283,11 @@ input:hover, textarea:hover {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
+  overflow: visible;
+}
+
+.title-img {
+  overflow: visible;
 }
 
 .title-text {
@@ -312,10 +317,8 @@ input:hover, textarea:hover {
 .title-img img {
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-}
-
-.title-img img {
   transition: ease-in-out .3s;
+
 }
 
 .title-img img:hover {
