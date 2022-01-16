@@ -24,6 +24,7 @@ li {
 
 img {
   vertical-align: top;
+  pointer-events: none;
 }
 
 h1,
@@ -203,7 +204,8 @@ input:hover, textarea:hover {
   left: 100%;
   width: 100%;
   min-height: 100vh;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   z-index: 98;
   padding: 70px 15px;
@@ -227,7 +229,7 @@ input:hover, textarea:hover {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #000;
 }
 
@@ -344,6 +346,7 @@ input:hover, textarea:hover {
   color: #FFF;
   opacity: 0;
   overflow: visible;
+  transition: opacity 1s;
 }
 
 .orange-box-right {
@@ -352,7 +355,6 @@ input:hover, textarea:hover {
 
 .orange-box.element-show {
   opacity: 1;
-  transition: opacity 1s;
 }
 
 .orange-box h5 {
@@ -429,6 +431,7 @@ input:hover, textarea:hover {
   line-height: 54px;
   margin: 0 0 35px -50px;
   opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .about h4 {
@@ -439,6 +442,7 @@ input:hover, textarea:hover {
   line-height: 30px;
   margin: 0 0 35px -100px;
   opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .about-text {
@@ -447,13 +451,14 @@ input:hover, textarea:hover {
   line-height: 28px;
   padding-bottom: 60px;
   margin-left: -150px;
+  max-width: 750px;
   opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .about h2.element-show, .about h4.element-show, .about-text.element-show {
   margin-left: 0;
   opacity: 1;
-  transition: 1s;
 }
 
 .about-title {
@@ -484,8 +489,10 @@ input:hover, textarea:hover {
 .experts img {
   margin-bottom: 18px;
   width: 95%;
+  max-height: 286px;
   margin: 20px auto;
   text-align: center;
+  object-fit:cover;
 }
 
 .experts-item {
@@ -526,11 +533,11 @@ input:hover, textarea:hover {
 .help-left {
   width: 60%;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .help-left.element-show {
   opacity: 1;
-  transition: 1s;
 }
 
 .help-left h2 {
@@ -565,12 +572,12 @@ input:hover, textarea:hover {
   box-sizing: border-box;
   margin-right: -200px;
   opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .help-right.element-show {
   margin-right: 0;
   opacity: 1;
-  transition: 1s;
 }
 
 .help-right h4 {
@@ -630,12 +637,12 @@ input:hover, textarea:hover {
   transition: box-shadow 0.3s;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
+  transition: opacity 1s, margin 1s, box-shadow .2s;
 }
 
 .experience-box.element-show {
   margin-right: 0;
   opacity: 1;
-  transition: 1s;
 }
 
 .experience-box:hover {
@@ -690,11 +697,11 @@ input:hover, textarea:hover {
   box-sizing: border-box;
   margin: 10px 0;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .servises-card.element-show {
   opacity: 1;
-  transition: 1s;
 }
 
 .servises-card-title {
@@ -760,31 +767,31 @@ input:hover, textarea:hover {
   flex: 3;
   margin-left: -200px;
   opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .outsoursing-left.element-show {
   margin-left: 0;
   opacity: 1;
-  transition: 1s;
 }
 
 .outsoursing-right {
   flex: 1;
+  overflow: visible;
   background: #F69A1B;
   color: #FFF;
   padding: 64px 71px;
-  transition: box-shadow ease-in-out 0.2s;
   transform-style: preserve-3d;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   margin-right: -200px;
   opacity: 0;
+  transition: opacity 1s, margin 1s, box-shadow ease-in-out 0.2s;
 }
 
 .outsoursing-right.element-show {
   margin-right: 0;
   opacity: 1;
-  transition: 1s;
 }
 
 .outsoursing-right:hover {
@@ -846,11 +853,11 @@ input:hover, textarea:hover {
   margin-bottom: 50px;
   border-left: solid 2px #5477BB;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .for-who__item.element-show {
   opacity: 1;
-  transition: 1s;
 }
 
 .for-who__item h4 {
@@ -924,11 +931,11 @@ input:hover, textarea:hover {
   display: flex;
   margin: 20px 0 20px 20px;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .benefits__item.element-show {
   opacity: 1;
-  transition: 1s;
 }
 
 .benefits__item h4 {
@@ -957,6 +964,7 @@ input:hover, textarea:hover {
   background: #f69b1b42;
   padding: 0 15px;
   margin-right: 20px;
+  overflow: visible;
 }
 
 /* GROWTH
@@ -979,11 +987,11 @@ input:hover, textarea:hover {
   flex-direction: column;
   padding: 60px 100px;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .growth__box.element-show {
   opacity: 1;
-  transition: 1s;
 }
 
 .growth__box h4 {
@@ -1019,10 +1027,19 @@ input:hover, textarea:hover {
 .begin-row {
   display: flex;
   justify-content: space-between;
+  margin-left: -200px;
+  opacity: 0;
+  transition: opacity 1s, margin 1s;
 }
 
 .begin-item {
   width: 32%;
+  max-width: 362px;
+}
+
+.begin-row.element-show {
+  margin-left: 0;
+  opacity: 1;
 }
 
 .begin-icon {
@@ -1139,6 +1156,7 @@ input:hover, textarea:hover {
   width: 100%;
   height: 100%;
   transition: 0.4s;
+  pointer-events: visible;
 }
 
 .publications-slider-item__image img:hover {
