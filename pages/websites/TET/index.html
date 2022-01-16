@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0m, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="css/style.css">
   <title>TET</title>
 
@@ -326,7 +326,7 @@
                 экономии на штатном бухгалтере, то сейчас к нему обращаются с целью</p>
               <h4>достичь конкурентных преимуществ, снижения финансовых рисков и повышения рентабельности бизнеса. </h4>
             </div>
-            <div class="outsoursing-right" data-tilt="">
+            <div class="outsoursing-right">
               <h5>70%</h5>
               <p>компаний в мире пользуются услугами бухгалтера на аутсорсе</p>
             </div>
@@ -719,7 +719,7 @@
               <div class="contacts-subscribe">
                 <p>Подпишитесь на нашу рассылку и получайте новости и извещения о событиях и отраслевые отчеты на свою
                   почту.</p>
-                <form class="contacts-email-form" action="#">
+                <form class="contacts-email-form">
                   <input class="contacts-email-input" type="email" id="contactsEmail" placeholder="E-mail"
                     autocomplete="off">
                   <input class="contacts-email-input-submit" type="submit" value="">
@@ -730,20 +730,16 @@
             <div class="contacts-right" id="message">
               <h3>Отправить сообщение</h3>
               <div class="contacts-message">
-                <form action="#">
-                  <input class="contacts-name-input" type="text" id="contactsName" placeholder="Ваше имя"
-                    autocomplete="off">
+                <form>
+                  <input class="contacts-name-input" type="text" id="contactsName" placeholder="Ваше имя" autocomplete="off">
+
+                  <input class="contacts-email-input" type="email" id="contactsEmailMessage" placeholder="E-mail" autocomplete="off">
+
+                  <textarea class="contacts-message-textarea" name="message" id="contactsMessage" rows="3" placeholder="Сообщение" autocomplete="off"></textarea>
+
+                  <p>Нажимая “Отправить” вы автоматически соглашаетесь с политикой конфиденциальности</p>
+                  <input type="submit" value="Отправить">
                 </form>
-                <form action="#">
-                  <input class="contacts-email-input" type="email" id="contactsEmailMessage" placeholder="E-mail"
-                    autocomplete="off">
-                </form>
-                <form action="#">
-                  <textarea class="contacts-message-textarea" name="message" id="contactsMessage" rows="3"
-                    placeholder="Сообщение" autocomplete="off"></textarea>
-                </form>
-                <p>Нажимая “Отправить” вы автоматически соглашаетесь с политикой конфиденциальности</p>
-                <button href="#">Отправить</button>
               </div>
             </div>
           </div>
