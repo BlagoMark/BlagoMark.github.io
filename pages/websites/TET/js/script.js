@@ -97,10 +97,14 @@ $(function () {
 });
 
 // Scrolling animations ============================
+
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('element-show');
+    }
+    else {
+    change.target.classList.remove('element-show');
     }
   });
 }
@@ -108,7 +112,7 @@ let options = {
   threshold: [0.5]
 };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.orange-box, .about h2, .about h4, .about-text, .help-left, .help-right, .experience-box, .servises-card, .outsoursing-left, .outsoursing-right, .for-who__item, .benefits__item, .growth__box');
+let elements = document.querySelectorAll('.orange-box, .about h2, .about h4, .about-text, .help-left, .help-right, .experience-box, .servises-card, .outsoursing-left, .outsoursing-right, .for-who__item, .benefits__item, .growth__box, .begin-row');
 
 for (let elm of elements) {
   observer.observe(elm);
