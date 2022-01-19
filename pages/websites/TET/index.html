@@ -126,11 +126,12 @@
             <h5>Получите надежное бухгалтерское обслуживание с гарантиями и ответственностью в договоре</h5>
           </div>
           <div class="orange-box-right">
-            <div class="orange-box-form">
-              <input class="text-field__input" type="tel" id="phone" placeholder="+38 (___) ___ - __ - __"
-                autocomplete="off">
-            </div>
-            <div class="orange-box-button"><a href="#">КОНСУЛЬТАЦИЯ</a></div>
+            <form class="orange-box-form" method="post" action="#">
+              <input class="orange-box-tel" type="tel" id="phone" placeholder="+38 (___) ___ - __ - __" autocomplete="off">
+              <div class="orange-box-button">
+                <input class="orange-box-button-submit" type="submit" value="КОНСУЛЬТАЦИЯ">
+              </div>
+            </form>
           </div>
         </div>
 
@@ -160,7 +161,13 @@
 
         <div class="experts">
           <div class="container">
-            <h2>Команда экспертов</h2>
+            <div class="experts-title">
+              <h2>Команда экспертов</h2>
+              <div class="slider-arrows">
+                <div class="prev-arrow"><img src="img/experts/prev-arrow.svg" alt=""></div>
+                <div class="next-arrow"><img src="img/experts/next-arrow.svg" alt=""></div>
+              </div>
+            </div>
             <h4>Ни один специалист не будет эффективнее целой команды!</h4>
             <div class="experts-slider">
               <div class="experts-item">
@@ -528,7 +535,13 @@
 
       <section class="publications" id="blog">
         <div class="container publications-container">
-          <h2>Публикации</h2>
+          <div class="publications-title">
+            <h2>Публикации</h2>
+            <div class="slider-arrows">
+              <div class="prev-arrow"><img src="img/experts/prev-arrow.svg" alt=""></div>
+              <div class="next-arrow"><img src="img/experts/next-arrow.svg" alt=""></div>
+            </div>
+          </div>
           <div class="publications-slider">
             <div class="publications-slider-item">
               <div class="publications-slider-item__image">
@@ -598,7 +611,13 @@
 
       <section class="trust">
         <div class="container trust-container">
+          <div class="trust-title">
           <h2>Нам доверяют</h2>
+            <div class="slider-arrows">
+              <div class="prev-arrow"><img src="img/experts/prev-arrow.svg" alt=""></div>
+              <div class="next-arrow"><img src="img/experts/next-arrow.svg" alt=""></div>
+            </div>
+          </div>
 
           <div class="trust-slider">
             <div class="trust-slider-item">
@@ -719,28 +738,25 @@
               <div class="contacts-subscribe">
                 <p>Подпишитесь на нашу рассылку и получайте новости и извещения о событиях и отраслевые отчеты на свою
                   почту.</p>
-                <form class="contacts-email-form">
-                  <input class="contacts-email-input" type="email" id="contactsEmail" placeholder="E-mail"
-                    autocomplete="off">
-                  <input class="contacts-email-input-submit" type="submit" value="">
+                <form class="contacts-email-form" method="post" action="#">
+                  <input class="contacts-email-input" type="email" id="contactsEmail" placeholder="E-mail" autocomplete="off">
+                  <input class="contacts-email-input-submit" onclick="clearFields();" type="submit" value="">
                 </form>
               </div>
             </div>
 
             <div class="contacts-right" id="message">
               <h3>Отправить сообщение</h3>
-              <div class="contacts-message">
-                <form>
-                  <input class="contacts-name-input" type="text" id="contactsName" placeholder="Ваше имя" autocomplete="off">
+              <form class="contacts-message" method="post" action="#">
+                <input class="contacts-name-input" type="text" id="contactsName" placeholder="Ваше имя" autocomplete="off">
 
-                  <input class="contacts-email-input" type="email" id="contactsEmailMessage" placeholder="E-mail" autocomplete="off">
+                <input class="contacts-email-input" type="email" id="contactsEmailMessage" placeholder="E-mail" autocomplete="off">
 
-                  <textarea class="contacts-message-textarea" name="message" id="contactsMessage" rows="3" placeholder="Сообщение" autocomplete="off"></textarea>
+                <textarea class="contacts-message-textarea" name="message" id="contactsMessage" rows="3" placeholder="Сообщение" autocomplete="off"></textarea>
 
-                  <p>Нажимая “Отправить” вы автоматически соглашаетесь с политикой конфиденциальности</p>
-                  <input type="submit" value="Отправить">
-                </form>
-              </div>
+                <p>Нажимая “Отправить” вы автоматически соглашаетесь с политикой конфиденциальности</p>
+                <input class="contacts-right-btn" type="submit" value="Отправить">
+              </form>
             </div>
           </div>
         </div>

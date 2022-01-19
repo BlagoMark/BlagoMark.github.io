@@ -22,7 +22,9 @@ $('.mobile-nav-item, .mobile-nav-button').click(function () {
 $(function () {
   $('.experts-slider').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: document.querySelectorAll('.experts .prev-arrow'),
+    nextArrow: document.querySelectorAll('.experts .next-arrow'),
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -51,7 +53,9 @@ $(function () {
 
   $('.publications-slider').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: document.querySelectorAll('.publications .prev-arrow'),
+    nextArrow: document.querySelectorAll('.publications .next-arrow'),
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -74,7 +78,9 @@ $(function () {
 
   $('.trust-slider').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
+    prevArrow: document.querySelectorAll('.trust .prev-arrow'),
+    nextArrow: document.querySelectorAll('.trust .next-arrow'),
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
@@ -117,3 +123,13 @@ let elements = document.querySelectorAll('.orange-box, .about h2, .about h4, .ab
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+$("form").submit(function (e) {
+  e.preventDefault();
+});
+
+$('input').keyup(function(f) {
+  if(f.keyCode == 13) {
+      $(this).next().focus();
+  }
+});

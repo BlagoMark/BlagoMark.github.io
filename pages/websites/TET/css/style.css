@@ -366,34 +366,33 @@ input:hover, textarea:hover {
   text-transform: uppercase;
 }
 
-.orange-box-right {
+.orange-box-form {
   display: flex;
   margin: 15px 0;
 }
 
 .orange-box-button {
-  padding: 20px 0;
-  background: #5477BB;
-  font-weight: 600;
-  font-size: 14px;
+  text-align: center;
+  overflow: visible;
+}
+
+.orange-box-button-submit {
   margin-left: 30px;
-  transition: background-color ease-in-out 0.3s;
+  height: 60px;
+  background: #5477BB;
+  color: #fff;
+  width: 200px;
 }
 
-.orange-box-button a {
-  color: #FFF;
-  padding: 20px 36px;
-}
-
-.orange-box-button:hover {
+.orange-box-button-submit:hover {
   background: #415b8f;
 }
 
-.orange-box-right input {
+.orange-box-tel {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin: 0;
+  margin: 0 ;
 
   padding: 20px 100px 20px 20px;
   font-family: inherit;
@@ -481,6 +480,11 @@ input:hover, textarea:hover {
   border-bottom: 1px solid #E8E8E8;
 }
 
+.experts-title, .publications-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .experts-slider {
   margin-left: -5px;
   text-align: center;
@@ -494,7 +498,35 @@ input:hover, textarea:hover {
   max-height: 286px;
   margin: 20px auto;
   text-align: center;
-  object-fit:cover;
+}
+
+.experts-slider img {
+  object-fit: cover;
+}
+
+.slider-arrows {
+  display: flex;
+}
+
+.prev-arrow, .next-arrow {
+  cursor: pointer;
+  border: solid 1px #415b8f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  background: #4063A7;
+}
+
+.slider-arrows img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+  width: 20px;
 }
 
 .experts-item {
@@ -1185,12 +1217,17 @@ input:hover, textarea:hover {
   border-bottom: 1px solid #E8E8E8;
 }
 
+.trust-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .trust h2 {
   font-weight: 600;
   font-size: 40px;
   line-height: 54px;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .trust-slider {
@@ -1415,10 +1452,9 @@ textarea {
   line-height: 18px;
 }
 
-.contacts-right button {
+.contacts-right-btn {
   font-weight: 600;
   font-size: 14px;
-  line-height: 28px;
   margin: auto;
   display: flex;
   height: 60px;
@@ -1433,7 +1469,7 @@ textarea {
   transition: 0.3s;
 }
 
-.contacts-right button:hover {
+.contacts-right-btn:hover {
   text-decoration: none;
   background: #4063A7;
 }
