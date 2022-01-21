@@ -60,14 +60,16 @@ div {
   margin: auto;
 }
 
-textarea, input {
+textarea,
+input {
   resize: none;
   cursor: pointer;
   transition: box-shadow ease-in-out .3s;
   font-weight: 600;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   box-shadow: 0px 0px 15px #b46900;
 }
 
@@ -392,7 +394,7 @@ input:hover, textarea:hover {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin: 0 ;
+  margin: 0;
 
   padding: 20px 100px 20px 20px;
   font-family: inherit;
@@ -457,7 +459,9 @@ input:hover, textarea:hover {
   transition: opacity 1s, margin 1s;
 }
 
-.about h2.element-show, .about h4.element-show, .about-text.element-show {
+.about h2.element-show,
+.about h4.element-show,
+.about-text.element-show {
   /* margin-left: 0; */
   opacity: 1;
 }
@@ -480,7 +484,8 @@ input:hover, textarea:hover {
   border-bottom: 1px solid #E8E8E8;
 }
 
-.experts-title, .publications-title {
+.experts-title,
+.publications-title {
   display: flex;
   justify-content: space-between;
 }
@@ -508,7 +513,8 @@ input:hover, textarea:hover {
   display: flex;
 }
 
-.prev-arrow, .next-arrow {
+.prev-arrow,
+.next-arrow {
   cursor: pointer;
   border: solid 1px #415b8f;
   text-align: center;
@@ -525,7 +531,7 @@ input:hover, textarea:hover {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; 
+  user-select: none;
   width: 20px;
 }
 
