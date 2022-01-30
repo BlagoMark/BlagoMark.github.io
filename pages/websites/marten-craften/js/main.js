@@ -1,66 +1,53 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (function() { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+$(document).ready(function () {
+  $(".header__burger").click(function (event) {
+    $(".header__burger, .header__nav_links").toggleClass("active");
+    $("body").toggleClass("scroll-lock");
+  });
+  $(".link").click(function (event) {
+    $(".header__burger, .header__nav_links").removeClass("active");
+  });
+});
 
-/***/ "./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+function typedText() {
+  let typed = new Typed(".typed-title", {
+    strings: ["СТИЛЬ", "НАДЕЖНОСТЬ", "КАЧЕСТВО"],
+    typeSpeed: 100,
+    loop: true,
+  });
+}
+typedText();
 
-eval("const scriptJs = __webpack_require__(/*! ./module/script.js */ \"./src/js/module/script.js\");\n\n\n//# sourceURL=webpack://gulp-assembly/./src/js/main.js?");
+$(function () {
+  $(".airpods-slider").slick({
+    arrows: true,
+    prevArrow: $(".prev"),
+    nextArrow: $(".next"),
+    infinite: true,
+    fade: true,
+    speed: 600,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+  });
 
-/***/ }),
+  $(".watch-slider").slick({
+    arrows: true,
+    prevArrow: $(".prev1"),
+    nextArrow: $(".next1"),
+    infinite: true,
+    fade: true,
+    speed: 600,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+  });
 
-/***/ "./src/js/module/script.js":
-/*!*********************************!*\
-  !*** ./src/js/module/script.js ***!
-  \*********************************/
-/***/ (function() {
-
-eval("$(document).ready(function () {\n  $(\".header__burger\").click(function (event) {\n    $(\".header__burger, .header__nav_links\").toggleClass(\"active\");\n    $(\"body\").toggleClass(\"scroll-lock\");\n  });\n});\n\nfunction typedText() {\n  let typed = new Typed(\".typed-title\", {\n    strings: [\"СТИЛЬ\", \"НАДЕЖНОСТЬ\", \"КАЧЕСТВО\"],\n    typeSpeed: 100,\n    loop: true,\n  });\n}\ntypedText();\n\n$(function () {\n  $(\".airpods-slider\").slick({\n    arrows: true,\n    prevArrow: $(\".prev\"),\n    nextArrow: $(\".next\"),\n    infinite: true,\n    fade: true,\n    speed: 600,\n    slidesToShow: 1,\n    adaptiveHeight: true,\n  });\n\n  $(\".watch-slider\").slick({\n    arrows: true,\n    prevArrow: $(\".prev1\"),\n    nextArrow: $(\".next1\"),\n    infinite: true,\n    fade: true,\n    speed: 600,\n    slidesToShow: 1,\n    adaptiveHeight: true,\n  });\n\n  $(\".complect-slider\").slick({\n    arrows: true,\n    prevArrow: $(\".prev2\"),\n    nextArrow: $(\".next2\"),\n    infinite: true,\n    fade: true,\n    speed: 600,\n    slidesToShow: 1,\n    adaptiveHeight: true,\n  });\n});\n\n// function resize() {\n//   $(\".slider-buttons\").width($(\".slide\").width());\n// }\n// resize();\n// $(window).resize(function () {\n//   resize();\n// });\n\n// $(document).ready(function () {\n//   $(\".slider-buttons\").css({\n//     width: $(\".slide\").width() + \"px\",\n//   });\n// });\n\n\n//# sourceURL=webpack://gulp-assembly/./src/js/module/script.js?");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/main.js");
-/******/ 	
-/******/ })()
-;
+  $(".complect-slider").slick({
+    arrows: true,
+    prevArrow: $(".prev2"),
+    nextArrow: $(".next2"),
+    infinite: true,
+    fade: true,
+    speed: 600,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+  });
+});
