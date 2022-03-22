@@ -15,7 +15,7 @@ overlay.addEventListener("click", () => {
 for (let i = 0; i < menuItem.length; i++) {
   menuItem[i].addEventListener("click", () => {
     menu.classList.toggle("active");
-    overlay.classList.toggle("active");
+    overlay.classList.remove("active");
   });
 }
 
