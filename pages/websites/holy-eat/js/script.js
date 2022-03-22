@@ -1,6 +1,6 @@
 // menu
 const burger = document.querySelector(".burger"),
-  menuItem = document.querySelectorAll(".menu__link"),
+  menuItem = document.querySelectorAll(".header__link"),
   menu = document.querySelector(".header__menu"),
   overlay = document.querySelector(".overlay");
 
@@ -12,6 +12,12 @@ overlay.addEventListener("click", () => {
   menu.classList.toggle("active");
   overlay.classList.toggle("active");
 });
+for (let i = 0; i < menuItem.length; i++) {
+  menuItem[i].addEventListener("click", () => {
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+}
 
 // FADEIN
 const fadeIn = (el, timeOut, display) => {
