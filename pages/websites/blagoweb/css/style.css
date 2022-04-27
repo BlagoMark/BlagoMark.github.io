@@ -226,10 +226,10 @@ canvas {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    gap: 70px;
   }
   .scene__inner_right {
     text-align: center;
+    margin-bottom: 70px;
   }
   .scene__inner h1 {
     font-size: 36px;
