@@ -1,0 +1,291 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#scene-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.scene__inner {
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg.jpg") center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.scene__inner h1 {
+  font-size: 50px;
+  letter-spacing: 15px;
+}
+
+.scene__inner h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.scene__inner button {
+  height: 40px;
+  width: 150px;
+  background: rgb(255, 169, 154);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 3px solid rgb(255, 169, 154);
+  transition: 0.3s;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.scene__inner button:hover {
+  background: none; /* color: rgb(226, 183, 139); */
+  transform: scale(1.05);
+}
+nav {
+  padding: 0 20px;
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  position: fixed;
+  background: rgba(100%, 100%, 100%, 1);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+.logo img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.navigation {
+  margin: 0 auto;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: center;
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: rgb(255, 169, 154);
+  height: 50px;
+  padding: 0 10px;
+  min-width: 80px;
+  border-radius: 100%;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation a:hover {
+  color: rgb(119, 212, 255);
+  background: #fff;
+  height: 80px;
+}
+
+.scene__inner .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.scene__inner_right {
+  min-width: 355px;
+}
+
+.scene__inner .model {
+  position: relative;
+  max-width: 350px;
+  max-height: 350px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: 1s ease-in-out 0s normal none running fadeInRight;
+}
+
+.scene__inner .model__fly {
+  height: 100%;
+  width: 100%;
+  animation: 5s ease-in-out 0s normal none infinite running fly;
+}
+
+.scene__inner img {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.scene__inner img.rot {
+  animation: 120s linear 0s normal none infinite running rot;
+}
+
+.social {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.social svg {
+  transition: 0.3s;
+}
+
+.social svg:hover {
+  transform: scale(1.3);
+}
+
+.social .social__telegram,
+.social .social__instagram {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.about {
+  min-height: 400px;
+  position: relative;
+  padding: 50px 0;
+}
+
+.about__waves {
+  background: url("../shapes/wave.svg");
+  /* background-size: 100% 100%; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 200%;
+  overflow: hidden;
+  line-height: 0;
+  animation: 15s ease-in-out 0s normal infinite none running waves;
+}
+
+.about__waves img {
+  width: 100%;
+  height: 100%;
+}
+
+.about h2 {
+  text-align: center;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  #scene-container {
+    height: 100vh;
+  }
+  .navigation__item {
+    display: none;
+  }
+  .scene__inner .container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 70px;
+  }
+  .scene__inner_right {
+    text-align: center;
+  }
+  .scene__inner h1 {
+    font-size: 36px;
+  }
+  .scene__inner h2 {
+    font-size: 20px;
+  }
+  .scene__inner .model {
+    max-width: 280px;
+    max-height: 280px;
+  }
+  .about__waves {
+    height: 60px;
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(-2%);
+  }
+  50% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(-2%);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
