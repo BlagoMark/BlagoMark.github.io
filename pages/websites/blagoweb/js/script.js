@@ -33,7 +33,7 @@ scene.add(pl1, pl2, pl3);
 
 const loader = new THREE.GLTFLoader();
 loader.load(
-  "../model/untitled.glb",
+  "/model/untitled.glb",
   function (gltf) {
     city1 = gltf.scene;
     city1.scale.set(0.2, 0.2, 0.2);
