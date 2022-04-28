@@ -77,32 +77,21 @@ nav {
   margin: 0 auto;
   align-items: center;
 }
-.logo {
-  height: 50px;
-  width: 50px;
-}
-.logo:hover {
-  transform: scale(1.2);
-}
-.logo img {
-  width: 100%;
-  pointer-events: none;
-  user-select: none;
-}
 .navigation {
   margin: 0 auto;
-  height: 50px;
+  height: 80px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   justify-self: center;
   list-style-type: none;
-  width: 500px;
+  width: 80%;
   display: flex;
 }
 
 .navigation a {
   text-decoration: none;
   color: rgb(255, 169, 154);
+  font-size: 20px;
   height: 50px;
   padding: 0 10px;
   min-width: 80px;
@@ -115,8 +104,6 @@ nav {
 
 .navigation a:hover {
   color: rgb(119, 212, 255);
-  background: #fff;
-  height: 80px;
 }
 
 .scene__inner .container {
@@ -142,6 +129,12 @@ nav {
 }
 
 .scene__inner .model__fly {
+  background: rgba(100%, 100%, 100%, 0.8);
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   animation: 5s ease-in-out 0s normal none infinite running fly;
@@ -150,7 +143,7 @@ nav {
 .scene__inner img {
   position: absolute;
   transform: translateY(-50%);
-  width: 100%;
+  width: 90%;
   text-align: center;
   user-select: none;
   pointer-events: none;
@@ -218,6 +211,9 @@ canvas {
 @media (max-width: 768px) {
   #scene-container {
     height: 100vh;
+  }
+  .navigation {
+    height: 50px;
   }
   .navigation__item {
     display: none;
