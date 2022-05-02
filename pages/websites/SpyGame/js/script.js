@@ -15,7 +15,6 @@ const locations = [
   "Коллцентр",
   "Бункер",
   "Багажник",
-  "Дом анимешника",
   "Шиномонтажка",
   "Метро",
   "Эйфелева башня",
@@ -26,6 +25,56 @@ const locations = [
   "Ангар",
   "Кофейня",
   "Красти-краб",
+  "Психбольница",
+  "Планетарий",
+  "Икея",
+  "Зал с игровыми автоматами",
+  "Бассейн",
+  "Музей",
+  "Студия звукозаписи",
+  "Магазин игрушек",
+  "Детский сад",
+  "Баня",
+  "Палатка",
+  "Кабинет директора",
+  "Отель",
+  "Подводная лодка",
+  "Казино",
+  "Шпионская база",
+  "Необитаемый остров",
+  "Шахта",
+  "Деревня",
+  "Столовая",
+  "Пещера",
+  "Аэропорт",
+  "Цирк",
+  "Чердак",
+  "Зоопарк",
+  "Секонд-хенд",
+  "Аптека",
+  "Завод",
+  "Велотрек",
+  "Скейтпарк",
+  "Кинотеатр",
+  "Космодром",
+  "Автозаправка",
+  "Аквапарк",
+  "Почта",
+  "Яхта",
+  "Полицейский участок",
+  "Поезд",
+  "Джунгли",
+  "Пустыня",
+  "Диснейленд",
+  "Городская канализция",
+  "Заброшенный дом",
+  "Сцена",
+  "Конюшня",
+  "Эверест",
+  "Кондитерская",
+  "Театр",
+  "Вулкан",
+  "Пляж",
 ];
 const spy = "Шпион";
 const testCardLocation =
@@ -33,6 +82,7 @@ const testCardLocation =
 const players = document.querySelector("#players");
 const spyKol = document.querySelector("#spy");
 const cardLocation = document.querySelector(".card");
+const menu = document.querySelector(".menu");
 const game = document.querySelector(".game");
 const showCard = document.querySelector(".showCard");
 const counter = document.querySelector(".counter");
@@ -54,7 +104,10 @@ function gameStart() {
       spyKol.value < players.value / 2 &&
       spyKol.value != 0
     ) {
+      menu.classList.remove("active");
       game.classList.add("active");
+    } else {
+      window.location.reload();
     }
     let numberOfCard = 0;
     cardLocation.innerHTML = array[numberOfCard];
@@ -75,9 +128,12 @@ function gameStart() {
         cardLocation.classList.remove("active");
         counter.innerHTML = "Хорошей игры!";
         cardLocation.remove();
-        showCard.innerHTML = "Начать заново";
+        showCard.innerHTML = "Сыграть снова";
         showCard.addEventListener("click", () => {
-          window.location.reload();
+          players.value = null;
+          spyKol.value = null;
+          game.classList.remove("active");
+          menu.classList.add("active");
         });
       }
     });
