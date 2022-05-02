@@ -87,6 +87,9 @@ const game = document.querySelector(".game");
 const showCard = document.querySelector(".showCard");
 const counter = document.querySelector(".counter");
 const submit = document.querySelector("#submit");
+const rules = document.querySelector("#rules");
+const back = document.querySelector("#back");
+const rulesPage = document.querySelector(".rules");
 showCard.innerHTML = "показать карту";
 
 gameStart();
@@ -100,9 +103,10 @@ function gameStart() {
       array[Math.floor(Math.random() * array.length)] = spy;
     }
     if (
-      players.value >= 4 &&
-      spyKol.value < players.value / 2 &&
-      spyKol.value != 0
+      players.value >= 3 &&
+      spyKol.value <= players.value / 3 &&
+      spyKol.value != 0 &&
+      players.value <= 20
     ) {
       menu.classList.remove("active");
       game.classList.add("active");
@@ -130,12 +134,17 @@ function gameStart() {
         cardLocation.remove();
         showCard.innerHTML = "Сыграть снова";
         showCard.addEventListener("click", () => {
-          players.value = null;
-          spyKol.value = null;
-          game.classList.remove("active");
-          menu.classList.add("active");
+          window.location.reload();
         });
       }
     });
+  });
+  rules.addEventListener("click", () => {
+    menu.classList.remove("active");
+    rulesPage.classList.add("active");
+  });
+  back.addEventListener("click", () => {
+    menu.classList.add("active");
+    rulesPage.classList.remove("active");
   });
 }
